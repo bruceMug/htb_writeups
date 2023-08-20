@@ -12,4 +12,11 @@ I started by inspecting the bot.js but nothing of value was found
 Then I inspected the config.json file, It contains a base64 string. I used the command 'echo {string} | base64 --decode ``` to decode the string which read 
 ""Red Herring, read the JS carefully"". When I first read the output, I inspected the JS over and over again inorder to find a clue. I even tried to run the 
 file locally but all was in vain.
-After a great thought, I tried finding the meaning of "Red Herring",
+After a great thought, I tried finding the meaning of "Red Herring" as it means ```a clue or piece of information that is, or is intended to be, misleading or distracting.```
+This added salt to the wound and I spent even more time with the js file.
+
+After a little more time, I tried to inspect the .git folder. I tried to use ```grep -r 'token' ``` but go nothing.
+Then I tried ```git log``` and something interesting showed up; a commit that was made.
+I further went ahead to inspect the specific commit using its ID using ```git show {id}``` and I got a base64 string
+
+and on decoding; boom I got the flag
