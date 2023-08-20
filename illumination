@@ -1,0 +1,15 @@
+This is my first writeup for a challenge
+
+The challenge title is Illumination and the description says ```A Junior Developer just switched to a new source control platform. Can you find the secret token?```
+No connection to server required to complete the challenge
+
+Solution
+I downloaded the necessary files by clicking on ```Download Files``` and a zip file title ```Illumination.js``` was downloaded.
+
+Unzip the files and it containes the following three files i.e config.json, bot.js and .git folder
+I started by inspecting the bot.js but nothing of value was found
+
+Then I inspected the config.json file, It contains a base64 string. I used the command 'echo {string} | base64 --decode ``` to decode the string which read 
+""Red Herring, read the JS carefully"". When I first read the output, I inspected the JS over and over again inorder to find a clue. I even tried to run the 
+file locally but all was in vain.
+After a great thought, I tried finding the meaning of "Red Herring",
